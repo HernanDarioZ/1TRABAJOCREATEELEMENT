@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+</head>
+  
+<body>
+    <h2 class="hello"> Welcome to gfg </h2>
+  
+    <p id="hi">Hi it's me.</p>
+  
+  
+    <button onclick="apply()">
+        Apply css dynamically
+    </button>
+      
+    <script>
+        function apply() {
+            // It overwrites exisiting classes
+            var h2 = document.querySelector("h2");
+            h2.className = "test";
+  
+            // Add new classe to exisiting classes
+            var p = document.querySelector("p");
+            p.classList.add("test");
+  
+            // Sellect all elements with class test
+            var temp = document.querySelectorAll(".test");
+  
+            // Apply CSS property to it
+            for (var i = 0; i < temp.length; i++) {
+                temp[i].style.color = "green";
+                temp[i].style.fontSize = "40px";
+            }
+        }
+    </script>
+</body>
+  
+</html>
